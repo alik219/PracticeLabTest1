@@ -5,6 +5,10 @@ Add private fields, constructor arguments, interface realization and relevant
 associations/multiplicities. A hand drawing plus a text alternative is enough.
 
 
+<<Interface>>        |        |Recording ReceipySink          |        |-recipts: list
+ciptSink           |        |            
++accept(job:PrintJob)| <------|
+
 
 
 
@@ -23,6 +27,27 @@ This is because code from outside is created so that ownership of the object is 
 
 
 Sketch the message order for one valid submission and explain why invalid input
+
+Test            PrintDesk               RecordingReceiptSink
+
+1: submit(job)  |
+--------------->| 2:check job != null
+                | 3: accept(job)
+                | --------------------->| 4: recipts.add(job)
+                |                       |
+                |  <-------------------|
+                |   return with solid line
+                |
+|<-------------
+return with solid line                 
+
+
+
+
+
+
+
+
 
 PrintJob("notblank",[1-10])-> submit(job) -> check job != null -> accept(job) -> receipts.add(job);
 
