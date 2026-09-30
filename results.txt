@@ -1,0 +1,3 @@
+Paste your actual check and JUnit output here if keeping a practice record.
+Label ordinary Java checks and JUnit results separately. No submission or mark
+is required for this demo practice.
